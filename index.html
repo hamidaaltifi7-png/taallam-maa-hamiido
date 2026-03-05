@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>تعلم مع حميدو</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  background-color: #fdf6e3;
+  color: #333;
+  text-align: center;
+}
+
+h1 { color: #d2691e; }
+
+.box {
+  margin: 20px auto;
+  padding: 20px;
+  width: 60%;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+input, textarea {
+  width: 90%;
+  padding: 10px;
+  margin: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #d2691e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h1>✨ تعلم مع حميدو ✨</h1>
+
+<div class="box" id="loginBox">
+<h2>دخول المشرفة</h2>
+<input type="password" id="password" placeholder="أدخل كلمة السر">
+<br>
+<button onclick="checkPassword()">دخول</button>
+</div>
+
+<div class="box" id="contentBox" style="display:none;">
+<h2>مرحبًا بكِ يا مشرفة 🌸</h2>
+<p>يمكنك الآن كتابة قصصك وتطوير موقعك ✍️</p>
+</div>
+
+<script>
+function checkPassword() {
+  var pass = document.getElementById("password").value;
+  if(pass === "1234") {
+    document.getElementById("loginBox").style.display = "none";
+    document.getElementById("contentBox").style.display = "block";
+  } else {
+    alert("كلمة السر غير صحيحة");
+  }
+}
+</script>
+
+</body>
+</html>
